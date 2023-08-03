@@ -18,8 +18,9 @@ export const DEFAULT_THEME: Theme = {
   itemHeight: getHeightPercent(7),
   flagSize: Platform.select({ android: 20, default: 30 }),
   flagSizeButton: Platform.select({ android: 20, default: 30 }),
-  itemTextAlign: 'auto',
+  itemTextAlign: 'left',
   itemTextAlignVertical: 'auto',
+  // TODO: should be done based on lanauge (useRTL)
   filterTextAlign: 'auto',
   filterTextAlignVertical: 'auto',
 }
