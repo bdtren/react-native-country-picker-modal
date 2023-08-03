@@ -34,6 +34,7 @@ export const CountryFilter = (props: CountryFilterProps) => {
       testID='text-input-country-filter'
       autoCorrect={false}
       placeholderTextColor={filterPlaceholderTextColor}
+      placeholder={!RTL ? "Search" : "أبحث"}
       style={[
         styles.input,
         { 
@@ -51,5 +52,4 @@ export const CountryFilter = (props: CountryFilterProps) => {
 
 CountryFilter.defaultProps = {
   autoFocus: false,
-  placeholder: 'Enter country name',
 }
