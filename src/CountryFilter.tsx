@@ -1,5 +1,6 @@
 import React from 'react'
 import { TextInput, StyleSheet, TextInputProps, Platform } from 'react-native'
+import { useRTL } from "@src/i18n"
 import { useTheme } from './CountryTheme'
 
 const styles = StyleSheet.create({
@@ -19,6 +20,7 @@ const styles = StyleSheet.create({
 export type CountryFilterProps = TextInputProps
 
 export const CountryFilter = (props: CountryFilterProps) => {
+  const RTL = useRTL()
   const {
     filterPlaceholderTextColor,
     fontFamily,
@@ -38,7 +40,7 @@ export const CountryFilter = (props: CountryFilterProps) => {
           fontFamily,
           fontSize,
           color: onBackgroundTextColor,
-          textAlign: filterTextAlign,
+          textAlign: RTL ? 'right' : 'left',
           textAlignVertical: filterTextAlignVertical,
         },
       ]}
